@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="410dp"
+    android:layout_height="410dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="82dp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/autoCompleteTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textClock"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="82dp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"/>
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/autoCompleteTextView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/button"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/autoCompleteTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/checkedTextView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/textClock"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
